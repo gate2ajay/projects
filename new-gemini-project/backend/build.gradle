@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.5'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.digitalknowmads.media-manager'
+version = '0.0.1-SNAPSHOT'
+description = 'Media Manager API Backend' // Updated description
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot Web Starter for REST APIs and embedded Tomcat
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Developer tools for automatic restarts (optional)
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // Lombok for reducing boilerplate code (optional but helpful)
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Spring Boot Test Starter for testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Optional: Add metadata-extractor if needed for more detailed info
+    // implementation 'com.drewnoakes:metadata-extractor:2.19.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+

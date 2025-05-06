@@ -1,0 +1,4 @@
+# Required Python libraries for the log parser script
+py_zipkin
+python-dotenv
+requests
