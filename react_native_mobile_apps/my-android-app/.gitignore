@@ -1,0 +1,59 @@
+# Gitignore file for React Native & Expo projects
+#
+# Learn more: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+### General ###
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist
+web-build
+build
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+### Expo ###
+.expo/
+expo-env.d.ts
+
+### Metro Bundler ###
+.metro-health-check*
+
+### Native (if you run `expo prebuild`) ###
+android/
+ios/
+
+### Editor ###
+.idea/
+.vscode/
+
+### macOS ###
+.DS_Store
+*.pem
+
+# Temporary files
+*.orig.*
+*.swp
+*.swo
+
+# Generated CSS file (in root)
+/global.css
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
